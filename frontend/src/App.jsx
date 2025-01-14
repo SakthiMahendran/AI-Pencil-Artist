@@ -27,7 +27,7 @@ const AppContent = ({
         >
           &times;
         </button>
-        <FetchHistory baseUrl={baseUrl} />
+        <FetchHistory baseUrl={baseUrl} fetchTrigger={showHistory} />
       </div>
 
       {/* Top Bar */}
@@ -94,4 +94,3 @@ const App = () => {
 };
 
 export default App;
-

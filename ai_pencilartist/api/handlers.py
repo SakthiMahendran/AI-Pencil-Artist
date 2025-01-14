@@ -8,7 +8,7 @@ API_KEY = "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"
 class AIHandler:
     def __init__(self):
         # Initialize the Hugging Face Image Generator model with InferenceClient
-        self.image_model_id = "MaziyarPanahi/sljm-bag-stable-diffusion-xl-base-1.0"
+        self.image_model_id = "prithivMLmods/Super-Pencil-Flux-LoRA"
         self.inference_client = InferenceClient(model=self.image_model_id, token=API_KEY)
 
     def generate_image(self, user_prompt):
@@ -25,4 +25,5 @@ class AIHandler:
             img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
             return img_str, None
         except Exception as e:
+            print("Error: ",e)
             return None, str(e)

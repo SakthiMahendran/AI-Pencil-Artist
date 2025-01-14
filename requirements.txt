@@ -6,4 +6,3 @@ django-cors-headers
 transformers 
 torch
 diffusers
-react-router-dom

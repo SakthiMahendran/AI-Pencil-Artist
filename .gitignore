@@ -1,3 +1,5 @@
-fashion
+pencil
 *.sqlite3
 venv
+node_modules
+

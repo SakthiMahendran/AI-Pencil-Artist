@@ -1,6 +1,7 @@
+// FetchHistory.jsx
 import React, { useEffect, useState } from "react";
 
-const FetchHistory = ({ baseUrl }) => {
+const FetchHistory = ({ baseUrl, fetchTrigger }) => {
   const [response, setResponse] = useState("");
 
   useEffect(() => {
@@ -32,8 +33,10 @@ const FetchHistory = ({ baseUrl }) => {
       }
     };
 
-    fetchHistory();
-  }, [baseUrl]);
+    if (fetchTrigger) {
+      fetchHistory();
+    }
+  }, [baseUrl, fetchTrigger]);
 
   return <div className="fetch-history-container">{response}</div>;
 };
