@@ -1,8 +1,9 @@
 django
 djangorestframework
-huggingface-hub
-Pillow
+djangorestframework-simplejwt
 django-cors-headers
-transformers 
-torch
+huggingface-hub
+transformers
 diffusers
+Pillow
+rich
